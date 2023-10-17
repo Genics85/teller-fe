@@ -42,7 +42,6 @@ function AddTeller() {
 
         let response = await axios.post(`/api/teller`,data)
 
-        console.log("response",response)
         if(response.data){
             alert(`Teller created with success`)
             cleanUp()
@@ -87,7 +86,7 @@ function AddTeller() {
           }
         />
         <TextInputField
-          placeholder="Enter address"
+          placeholder="Enter password"
           value={data.password}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
             updateFields({ password: e.target.value })

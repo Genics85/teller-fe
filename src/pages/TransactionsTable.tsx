@@ -16,7 +16,6 @@ function TransactionsTable() {
       let response = await axios.get(`/api/transaction/${id}`);
 
       if (response != null) {
-        console.log("response", response);
         setTransactions(response?.data);
       } else {
         alert("Failed to fetch transactions");
@@ -24,7 +23,6 @@ function TransactionsTable() {
     } catch (e: any) {
       if (e?.response) {
         setTransactions(e?.response?.data);
-        console.log(e.response);
         return;
       }
       alert("Failed to fetch transactions");
